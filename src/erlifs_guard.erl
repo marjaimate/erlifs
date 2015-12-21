@@ -2,15 +2,15 @@
 
 -export([greetings/2]).
 
-greetings(Name, Language) ->
-    Greeting = greetings_1(Name, Language),
+greetings(Name, Locale) ->
+    Greeting = greetings_1(Name, Locale),
     io:format(Greeting, []).
 
-greetings_1(Name, Language) when Language =:= "EN" ->
+greetings_1(Name, Locale) when Locale =:= "EN" ->
     "Hi " ++ Name ++ "!";
-greetings_1(Name, Language) when Language =:= "FR" ->
+greetings_1(Name, Locale) when Locale =:= "FR" ->
     "Salut " ++ Name ++ "!";
-greetings_1(Name, Language) when Language =:= "HU" ->
+greetings_1(Name, Locale) when Locale =:= "HU" ->
     "Szia " ++ Name ++ "!";
 greetings_1(Name, _) ->
     "Hello " ++ Name ++ "!".

@@ -2,8 +2,8 @@
 
 -export([greetings/2]).
 
-greetings(Name, Language) ->
-    Greeting = greetings_1(Name, Language),
+greetings(Name, Locale) ->
+    Greeting = greetings_1(Name, Locale),
     io:format(Greeting, []).
 
 greetings_1(Name, "EN") ->

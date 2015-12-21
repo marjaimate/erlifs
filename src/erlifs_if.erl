@@ -3,15 +3,15 @@
 -export([greetings/2]).
 
 
-greetings(Name, Language) ->
+greetings(Name, Locale) ->
     Greeting = if
-                   Language =:= "EN" -> "Hi " ++ Name ++ "!";
+                   Locale =:= "EN" -> "Hi " ++ Name ++ "!";
                    true ->
                        if
-                           Language =:= "FR"  -> "Salut " ++ Name ++ "!";
+                           Locale =:= "FR"  -> "Salut " ++ Name ++ "!";
                            true ->
                                if
-                                   Language =:= "HU"  -> "Szia " ++ Name ++ "!";
+                                   Locale =:= "HU"  -> "Szia " ++ Name ++ "!";
                                    true -> "Hello " ++ Name ++"!"
                                end
                        end

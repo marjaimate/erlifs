@@ -2,8 +2,8 @@
 
 -export([greetings/2]).
 
-greetings(Name, Language) ->
-    GreetingFmt = greetings_format(Language),
+greetings(Name, Locale) ->
+    GreetingFmt = greetings_format(Locale),
     io:format(GreetingFmt, [Name]).
 
 greetings_format("EN") ->  "Hi ~s !";

@@ -2,8 +2,8 @@
 
 -export([greetings/2]).
 
-greetings(Name, Language) ->
-    Greeting = case Language of
+greetings(Name, Locale) ->
+    Greeting = case Locale of
                    "EN" -> "Hi " ++ Name ++ "!";
                    "FR" -> "Salut " ++ Name ++ "!";
                    "HU" -> "Szia " ++ Name ++ "!";
